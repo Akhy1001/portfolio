@@ -2,55 +2,70 @@
 
 import { useState } from "react";
 import { techStack } from "@/data/portfolioData";
+import { Sparkles, Flame, Smartphone, Code2 } from "lucide-react";
 import {
-  Code2,
-  Zap,
-  FileCode,
-  Palette,
-  Layers,
-  Smartphone,
-  Box,
-  Layout,
-  Cpu,
-  Server,
-  Database,
-  GitBranch,
-  Cloud,
-  GitCommit,
-  Container,
-  Globe,
-  CheckCircle,
-  Sparkles,
-  Layers3,
-  Flame,
-} from "lucide-react";
+  TypeScriptIcon,
+  NextjsIcon,
+  ReactIcon,
+  TailwindIcon,
+  AngularIcon,
+  SwiftIcon,
+  ReactNativeIcon,
+  CPlusPlusIcon,
+  NodeJsIcon,
+  SupabaseIcon,
+  GitIcon,
+  VercelIcon,
+  NetworkIcon,
+  TestFlaskIcon,
+  MobileUXIcon,
+} from "./TechIcons";
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState("Tous");
 
   const categories = ["Tous", ...techStack.map((item) => item.category)];
 
-  const getIconComponent = (iconName) => {
-    const iconMap = {
-      Code2: <Code2 size={20} className="text-white" />,
-      Zap: <Zap size={20} className="text-zinc-200" />,
-      FileCode: <FileCode size={20} className="text-white" />,
-      Palette: <Palette size={20} className="text-zinc-300" />,
-      Layers: <Layers size={20} className="text-zinc-200" />,
-      Smartphone: <Smartphone size={20} className="text-white" />,
-      Box: <Box size={20} className="text-zinc-300" />,
-      Layout: <Layout size={20} className="text-zinc-200" />,
-      Cpu: <Cpu size={20} className="text-white" />,
-      Server: <Server size={20} className="text-zinc-200" />,
-      Database: <Database size={20} className="text-white" />,
-      GitBranch: <GitBranch size={20} className="text-zinc-300" />,
-      Cloud: <Cloud size={20} className="text-white" />,
-      GitCommit: <GitCommit size={20} className="text-zinc-200" />,
-      Container: <Container size={20} className="text-white" />,
-      Globe: <Globe size={20} className="text-zinc-300" />,
-      CheckCircle: <CheckCircle size={20} className="text-white" />,
-    };
-    return iconMap[iconName] || <Code2 size={20} className="text-white" />;
+  const getSkillIcon = (skillName) => {
+    switch (skillName) {
+      case "TypeScript":
+        return <TypeScriptIcon className="w-6 h-6" />;
+      case "Next.js 14":
+      case "Next.js":
+        return <NextjsIcon className="w-6 h-6" />;
+      case "React.js":
+      case "React":
+        return <ReactIcon className="w-6 h-6" />;
+      case "Tailwind CSS & Vite":
+      case "Tailwind CSS":
+        return <TailwindIcon className="w-6 h-6" />;
+      case "Angular":
+        return <AngularIcon className="w-6 h-6" />;
+      case "Swift & SwiftUI":
+      case "Swift":
+        return <SwiftIcon className="w-6 h-6" />;
+      case "React Native & Expo":
+        return <ReactNativeIcon className="w-6 h-6" />;
+      case "Mobile UI / UX":
+        return <MobileUXIcon className="w-6 h-6" />;
+      case "C++ & Qt 6":
+      case "C++":
+        return <CPlusPlusIcon className="w-6 h-6" />;
+      case "Node.js & Express":
+        return <NodeJsIcon className="w-6 h-6" />;
+      case "Supabase & PostgreSQL":
+        return <SupabaseIcon className="w-6 h-6" />;
+      case "Programmation Réseau":
+        return <NetworkIcon className="w-6 h-6" />;
+      case "Git & GitHub":
+        return <GitIcon className="w-6 h-6" />;
+      case "Vercel & Cloud":
+        return <VercelIcon className="w-6 h-6" />;
+      case "Tests & Qualité Code":
+        return <TestFlaskIcon className="w-6 h-6" />;
+      default:
+        return <Code2 className="w-6 h-6 text-white" />;
+    }
   };
 
   const filteredCategories =
@@ -64,8 +79,8 @@ export default function Skills() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 glass-pill mb-4 border border-[var(--theme-primary)]/30">
-            <Sparkles size={14} className="text-[var(--theme-primary)]" />
+          <div className="inline-flex items-center gap-2 glass-pill mb-4 border border-white/20">
+            <Sparkles size={14} className="text-white" />
             <span>Expertise Technique</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
@@ -96,7 +111,7 @@ export default function Skills() {
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredCategories.map((catGroup) => (
-            <div key={catGroup.category} className="glass-card p-6 text-left">
+            <div key={catGroup.category} className="glass-card p-6 text-left border border-white/15 bg-white/[0.03]">
               <h3 className="text-xl font-bold text-white mb-6 pb-3 border-b border-white/10 flex items-center justify-between">
                 <span>{catGroup.category}</span>
                 <span className="text-xs font-mono text-zinc-400 font-normal">
@@ -104,29 +119,22 @@ export default function Skills() {
                 </span>
               </h3>
 
-              <div className="space-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {catGroup.skills.map((skill) => (
-                  <div key={skill.name} className="group">
-                    <div className="flex items-center justify-between mb-1.5">
-                      <div className="flex items-center gap-2.5">
-                        {getIconComponent(skill.icon)}
-                        <span className="font-semibold text-white text-sm group-hover:text-white transition-colors">
-                          {skill.name}
-                        </span>
-                      </div>
-                      <span className="text-xs font-mono text-zinc-400 font-bold">
-                        {skill.level}%
-                      </span>
+                  <div
+                    key={skill.name}
+                    className="p-3.5 rounded-xl bg-black/40 border border-white/10 hover:border-white/30 hover:bg-white/[0.06] transition-all text-left flex items-start gap-3.5 group shadow-sm"
+                  >
+                    <div className="p-2.5 rounded-xl bg-white/[0.07] border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+                      {getSkillIcon(skill.name)}
                     </div>
-
-                    <p className="text-xs text-zinc-400 mb-2 pl-7">{skill.description}</p>
-
-                    {/* Progress Bar */}
-                    <div className="w-full bg-white/10 h-2 rounded-full overflow-hidden p-0.5 border border-white/10">
-                      <div
-                        className="h-full rounded-full bg-white transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      />
+                    <div>
+                      <h4 className="font-semibold text-white text-sm">
+                        {skill.name}
+                      </h4>
+                      <p className="text-xs text-zinc-400 mt-0.5 leading-relaxed">
+                        {skill.description}
+                      </p>
                     </div>
                   </div>
                 ))}

@@ -15,6 +15,15 @@ import {
   Zap,
   CheckCircle2,
 } from "lucide-react";
+import {
+  TypeScriptIcon,
+  NextjsIcon,
+  ReactIcon,
+  TailwindIcon,
+  SwiftIcon,
+  CPlusPlusIcon,
+  NodeJsIcon,
+} from "./TechIcons";
 
 export default function Hero() {
   const [activeTab, setActiveTab] = useState("anas.config.ts");
@@ -56,13 +65,13 @@ ${personalInfo.bio}
   };
 
   const mainTechs = [
-    { name: "React 18", icon: "⚛️" },
-    { name: "Next.js 14", icon: "▲" },
-    { name: "Swift", icon: "🍎" },
-    { name: "TypeScript", icon: "📘" },
-    { name: "C++ / Qt", icon: "⚙️" },
-    { name: "Node.js", icon: "🟢" },
-    { name: "Tailwind CSS", icon: "🎨" },
+    { name: "React 18", icon: <ReactIcon className="w-4 h-4" /> },
+    { name: "Next.js 14", icon: <NextjsIcon className="w-4 h-4" /> },
+    { name: "Swift", icon: <SwiftIcon className="w-4 h-4" /> },
+    { name: "TypeScript", icon: <TypeScriptIcon className="w-4 h-4" /> },
+    { name: "C++ / Qt", icon: <CPlusPlusIcon className="w-4 h-4" /> },
+    { name: "Node.js", icon: <NodeJsIcon className="w-4 h-4" /> },
+    { name: "Tailwind CSS", icon: <TailwindIcon className="w-4 h-4" /> },
   ];
 
   return (
