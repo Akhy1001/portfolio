@@ -29,10 +29,10 @@ export default function Navbar({ currentTheme, setTheme }) {
   ];
 
   const themeOptions = [
-    { id: "violet", color: "#8B5CF6", label: "Violet Néon" },
-    { id: "cyan", color: "#06B6D4", label: "Cyan Néon" },
-    { id: "emerald", color: "#10B981", label: "Émeraude" },
-    { id: "amber", color: "#F59E0B", label: "Ambre" },
+    { id: "monochrome", color: "#FFFFFF", label: "Blanc Épuré" },
+    { id: "silver", color: "#E4E4E7", label: "Argent Métal" },
+    { id: "charcoal", color: "#71717A", label: "Gris Anthracite" },
+    { id: "minimal", color: "#27272A", label: "Noir Profond" },
   ];
 
   return (

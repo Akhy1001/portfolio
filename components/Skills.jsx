@@ -32,25 +32,25 @@ export default function Skills() {
 
   const getIconComponent = (iconName) => {
     const iconMap = {
-      Code2: <Code2 size={20} className="text-cyan-400" />,
-      Zap: <Zap size={20} className="text-yellow-400" />,
-      FileCode: <FileCode size={20} className="text-blue-400" />,
-      Palette: <Palette size={20} className="text-pink-400" />,
-      Layers: <Layers size={20} className="text-purple-400" />,
-      Smartphone: <Smartphone size={20} className="text-emerald-400" />,
-      Box: <Box size={20} className="text-amber-400" />,
-      Layout: <Layout size={20} className="text-indigo-400" />,
-      Cpu: <Cpu size={20} className="text-rose-400" />,
-      Server: <Server size={20} className="text-green-400" />,
-      Database: <Database size={20} className="text-cyan-400" />,
-      GitBranch: <GitBranch size={20} className="text-violet-400" />,
-      Cloud: <Cloud size={20} className="text-sky-400" />,
-      GitCommit: <GitCommit size={20} className="text-orange-400" />,
-      Container: <Container size={20} className="text-blue-400" />,
-      Globe: <Globe size={20} className="text-teal-400" />,
-      CheckCircle: <CheckCircle size={20} className="text-emerald-400" />,
+      Code2: <Code2 size={20} className="text-white" />,
+      Zap: <Zap size={20} className="text-zinc-200" />,
+      FileCode: <FileCode size={20} className="text-white" />,
+      Palette: <Palette size={20} className="text-zinc-300" />,
+      Layers: <Layers size={20} className="text-zinc-200" />,
+      Smartphone: <Smartphone size={20} className="text-white" />,
+      Box: <Box size={20} className="text-zinc-300" />,
+      Layout: <Layout size={20} className="text-zinc-200" />,
+      Cpu: <Cpu size={20} className="text-white" />,
+      Server: <Server size={20} className="text-zinc-200" />,
+      Database: <Database size={20} className="text-white" />,
+      GitBranch: <GitBranch size={20} className="text-zinc-300" />,
+      Cloud: <Cloud size={20} className="text-white" />,
+      GitCommit: <GitCommit size={20} className="text-zinc-200" />,
+      Container: <Container size={20} className="text-white" />,
+      Globe: <Globe size={20} className="text-zinc-300" />,
+      CheckCircle: <CheckCircle size={20} className="text-white" />,
     };
-    return iconMap[iconName] || <Code2 size={20} className="text-[var(--theme-primary)]" />;
+    return iconMap[iconName] || <Code2 size={20} className="text-white" />;
   };
 
   const filteredCategories =

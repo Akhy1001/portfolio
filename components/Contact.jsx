@@ -32,37 +32,37 @@ export default function Contact() {
       handle: "@Akhy1001",
       url: personalInfo.github,
       icon: <Github size={24} className="text-white" />,
-      color: "from-purple-500/10 to-indigo-500/10",
-      borderColor: "hover:border-purple-500/50",
+      color: "from-white/5 to-white/10",
+      borderColor: "hover:border-white/50",
     },
     {
       name: "LinkedIn",
       handle: "Anas FAIZ",
       url: personalInfo.linkedin,
-      icon: <Linkedin size={24} className="text-blue-400" />,
-      color: "from-blue-500/10 to-cyan-500/10",
-      borderColor: "hover:border-blue-500/50",
+      icon: <Linkedin size={24} className="text-white" />,
+      color: "from-white/5 to-white/10",
+      borderColor: "hover:border-white/50",
     },
     {
       name: "Twitter / X",
       handle: "@Akhy1001",
       url: personalInfo.twitter,
-      icon: <Twitter size={24} className="text-sky-400" />,
-      color: "from-sky-500/10 to-blue-500/10",
-      borderColor: "hover:border-sky-500/50",
+      icon: <Twitter size={24} className="text-zinc-200" />,
+      color: "from-white/5 to-white/10",
+      borderColor: "hover:border-white/50",
     },
     {
       name: "Discord",
       handle: "Akhy1001",
       url: personalInfo.discord,
-      icon: <MessageSquare size={24} className="text-indigo-400" />,
-      color: "from-indigo-500/10 to-purple-500/10",
-      borderColor: "hover:border-indigo-500/50",
+      icon: <MessageSquare size={24} className="text-zinc-200" />,
+      color: "from-white/5 to-white/10",
+      borderColor: "hover:border-white/50",
     },
   ];
 
   return (
-    <section id="contact" className="section-padding relative bg-[#090D16]/90">
+    <section id="contact" className="section-padding relative bg-[#050505]/95">
       <div className="container">
         
         {/* Section Header */}

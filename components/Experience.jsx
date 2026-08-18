@@ -84,8 +84,8 @@ export default function Experience() {
             </div>
           </div>
 
-          <div className="glass-pill border-emerald-500/30 text-emerald-400 text-xs shrink-0">
-            <CheckCircle2 size={14} />
+          <div className="glass-pill border-white/20 text-white text-xs shrink-0">
+            <CheckCircle2 size={14} className="text-white" />
             <span>Étudiant Actif</span>
           </div>
         </div>

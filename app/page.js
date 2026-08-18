@@ -10,7 +10,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [theme, setTheme] = useState("violet");
+  const [theme, setTheme] = useState("monochrome");
 
   return (
     <div data-theme={theme} className="min-h-screen relative flex flex-col justify-between">
