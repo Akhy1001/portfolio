@@ -1,21 +1,37 @@
 import "./globals.css";
+import { Plus_Jakarta_Sans, Inter, Fira_Code } from "next/font/google";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-heading",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
+});
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+});
 
 export const metadata = {
-  title: "Anas | Développeur Web & Mobile React / Next.js",
-  description: "Portfolio de développeur Web & Applications spécialisé en React, Next.js 14, React Native et TypeScript. Découvrez mes réalisations SaaS, Mobile et Web.",
-  keywords: ["Développeur Web", "Développeur Mobile", "React", "Next.js", "React Native", "TypeScript", "Portfolio", "Frontend", "Fullstack"],
+  title: "Anas | Développeur Web & Applications",
+  description: "Portfolio de développeur Web & Applications spécialisé en React, Next.js 14, Swift, C++ et TypeScript.",
+  keywords: ["Développeur Web", "React", "Next.js", "Swift", "C++", "TypeScript", "Portfolio"],
   authors: [{ name: "Anas" }],
-  openGraph: {
-    title: "Anas | Développeur Web & Mobile React / Next.js",
-    description: "Portfolio moderne de développeur spécialisé en architectures React, Next.js et applications mobiles iOS/Android.",
-    type: "website",
-    locale: "fr_FR",
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className="scroll-smooth">
+    <html
+      lang="fr"
+      className={`scroll-smooth ${plusJakartaSans.variable} ${inter.variable} ${firaCode.variable}`}
+    >
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
