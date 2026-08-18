@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { personalInfo } from "@/data/portfolioData";
-import { Code2, Menu, X, Sparkles, Send } from "lucide-react";
+import { Menu, X, Send } from "lucide-react";
 
-export default function Navbar({ currentTheme, setTheme }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -28,13 +28,6 @@ export default function Navbar({ currentTheme, setTheme }) {
     { name: "Contact", href: "#contact" },
   ];
 
-  const themeOptions = [
-    { id: "monochrome", color: "#FFFFFF", label: "Blanc Épuré" },
-    { id: "silver", color: "#E4E4E7", label: "Argent Métal" },
-    { id: "charcoal", color: "#71717A", label: "Gris Anthracite" },
-    { id: "minimal", color: "#27272A", label: "Noir Profond" },
-  ];
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -44,7 +37,7 @@ export default function Navbar({ currentTheme, setTheme }) {
       <div className="container flex items-center justify-between">
         {/* Logo with GitHub Avatar */}
         <a href="#hero" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-xl overflow-hidden border-2 border-[var(--theme-primary)] shadow-lg shadow-[var(--theme-glow)] transition-transform group-hover:scale-110 shrink-0">
+          <div className="relative w-10 h-10 rounded-xl overflow-hidden border-2 border-white/30 shadow-lg shadow-white/10 transition-transform group-hover:scale-110 shrink-0">
             <img
               src={personalInfo.avatar}
               alt={personalInfo.name}
@@ -52,8 +45,8 @@ export default function Navbar({ currentTheme, setTheme }) {
             />
           </div>
           <div className="flex flex-col text-left">
-            <span className="font-bold text-lg tracking-tight group-hover:text-[var(--theme-primary)] transition-colors">
-              &lt;{personalInfo.name} <span className="text-[var(--theme-primary)]">.dev</span> /&gt;
+            <span className="font-bold text-lg tracking-tight text-white group-hover:text-zinc-200 transition-colors">
+              &lt;{personalInfo.name} <span className="text-white">.dev</span> /&gt;
             </span>
             <span className="text-[11px] text-zinc-400 font-mono hidden sm:inline-block">Web & Mobile React</span>
           </div>
@@ -72,25 +65,8 @@ export default function Navbar({ currentTheme, setTheme }) {
           ))}
         </nav>
 
-        {/* Right side items: Theme Switcher + CTA */}
+        {/* Right side CTA Button */}
         <div className="hidden lg:flex items-center gap-4">
-          {/* Theme Color Picker */}
-          <div className="flex items-center gap-1.5 glass-card px-3 py-1.5 rounded-full border border-white/15" title="Changer la couleur d'accent">
-            <Sparkles size={14} className="text-zinc-400 mr-1" />
-            {themeOptions.map((t) => (
-              <button
-                key={t.id}
-                onClick={() => setTheme(t.id)}
-                className={`w-5 h-5 rounded-full transition-transform hover:scale-125 ${
-                  currentTheme === t.id ? "ring-2 ring-white scale-110" : "opacity-60"
-                }`}
-                style={{ backgroundColor: t.color }}
-                title={t.label}
-              />
-            ))}
-          </div>
-
-          {/* Contact Button */}
           <a href="#contact" className="btn-primary py-2 px-5 text-sm">
             <span>Me Contacter</span>
             <Send size={15} />
@@ -115,30 +91,11 @@ export default function Navbar({ currentTheme, setTheme }) {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-medium text-gray-200 hover:text-[var(--theme-primary)] py-2 border-b border-white/5"
+              className="text-base font-medium text-gray-200 hover:text-white py-2 border-b border-white/5"
             >
               {link.name}
             </a>
           ))}
-          
-          <div className="flex items-center justify-between pt-2">
-            <span className="text-xs text-gray-400 font-mono">Accent couleur:</span>
-            <div className="flex items-center gap-2">
-              {themeOptions.map((t) => (
-                <button
-                  key={t.id}
-                  onClick={() => {
-                    setTheme(t.id);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`w-6 h-6 rounded-full ${
-                    currentTheme === t.id ? "ring-2 ring-white" : "opacity-70"
-                  }`}
-                  style={{ backgroundColor: t.color }}
-                />
-              ))}
-            </div>
-          </div>
 
           <a
             href="#contact"
