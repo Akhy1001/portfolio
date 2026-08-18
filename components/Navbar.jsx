@@ -55,17 +55,17 @@ export default function Navbar({ currentTheme, setTheme }) {
             <span className="font-bold text-lg tracking-tight group-hover:text-[var(--theme-primary)] transition-colors">
               &lt;{personalInfo.name} <span className="text-[var(--theme-primary)]">.dev</span> /&gt;
             </span>
-            <span className="text-[11px] text-slate-500 font-mono hidden sm:inline-block">Web & Mobile React</span>
+            <span className="text-[11px] text-zinc-400 font-mono hidden sm:inline-block">Web & Mobile React</span>
           </div>
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-1 glass-card px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+        <nav className="hidden md:flex items-center gap-1 glass-card px-4 py-2 rounded-full border border-white/15">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-black hover:bg-slate-100 transition-all"
+              className="px-4 py-2 rounded-full text-sm font-semibold text-zinc-300 hover:text-white hover:bg-white/10 transition-all"
             >
               {link.name}
             </a>
@@ -75,8 +75,8 @@ export default function Navbar({ currentTheme, setTheme }) {
         {/* Right side items: Theme Switcher + CTA */}
         <div className="hidden lg:flex items-center gap-4">
           {/* Theme Color Picker */}
-          <div className="flex items-center gap-1.5 glass-card px-3 py-1.5 rounded-full border border-slate-200 shadow-sm" title="Changer la couleur d'accent">
-            <Sparkles size={14} className="text-slate-500 mr-1" />
+          <div className="flex items-center gap-1.5 glass-card px-3 py-1.5 rounded-full border border-white/15" title="Changer la couleur d'accent">
+            <Sparkles size={14} className="text-zinc-400 mr-1" />
             {themeOptions.map((t) => (
               <button
                 key={t.id}

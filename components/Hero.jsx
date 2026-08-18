@@ -93,7 +93,7 @@ ${personalInfo.bio}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl font-normal leading-relaxed">
+            <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed">
               {personalInfo.tagline}
             </p>
 
@@ -120,10 +120,10 @@ ${personalInfo.bio}
             </div>
 
             {/* Quick Status Pill */}
-            <div className="pt-6 border-t border-slate-200 mt-2">
-              <div className="glass-pill border border-slate-300 px-4 py-2 text-sm text-slate-700 font-mono inline-flex items-center gap-2">
+            <div className="pt-6 border-t border-white/15 mt-2">
+              <div className="glass-pill border border-white/20 px-4 py-2 text-sm text-zinc-300 font-mono inline-flex items-center gap-2">
                 <span>🎓</span>
-                <span>Formation : <strong className="text-slate-900 font-bold">{personalInfo.yearsExperience}</strong></span>
+                <span>Formation : <strong className="text-white font-bold">{personalInfo.yearsExperience}</strong></span>
               </div>
             </div>
 

@@ -15,30 +15,30 @@ export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
       <div
-        className="relative w-full max-w-3xl glass-card bg-[#0D1322]/95 border border-white/20 rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-3xl glass-card bg-[#0A0A0A] border border-white/20 rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col text-white"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header with image */}
-        <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-gray-900 shrink-0">
+        <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-black shrink-0">
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D1322] via-[#0D1322]/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent"></div>
           
           {/* Category Pill */}
-          <div className="absolute top-4 left-4 glass-pill border-white/20 text-xs">
-            <Tag size={12} className="text-[var(--theme-primary)]" />
+          <div className="absolute top-4 left-4 glass-pill border-white/30 bg-black/70 text-white text-xs">
+            <Tag size={12} className="text-white" />
             <span>{project.tag}</span>
           </div>
 
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2.5 rounded-full glass-card bg-black/50 text-white hover:bg-white/20 transition-colors"
+            className="absolute top-4 right-4 p-2.5 rounded-full glass-card bg-black/70 border border-white/30 text-white hover:bg-white hover:text-black transition-colors"
             aria-label="Fermer"
           >
             <X size={20} />
@@ -53,14 +53,14 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-6 overflow-y-auto space-y-6 flex-1 text-left">
+        <div className="p-6 overflow-y-auto space-y-6 flex-1 text-left bg-[#0A0A0A]">
           
           {/* Short & Long Description */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-2">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-2 font-mono">
               Présentation du Projet
             </h4>
-            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+            <p className="text-zinc-200 text-sm sm:text-base leading-relaxed">
               {project.longDesc}
             </p>
           </div>
@@ -68,14 +68,14 @@ export default function ProjectModal({ project, onClose }) {
           {/* Key Metrics */}
           {project.metrics && project.metrics.length > 0 && (
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
-                <Award size={16} className="text-slate-900" />
+              <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-300 mb-3 flex items-center gap-2 font-mono">
+                <Award size={16} className="text-white" />
                 Impact & Résultats Clés
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {project.metrics.map((metric, idx) => (
-                  <div key={idx} className="glass-card p-3 border-slate-200 text-center bg-slate-50 shadow-xs">
-                    <span className="text-xs font-semibold text-slate-900 block">
+                  <div key={idx} className="glass-card p-3 border-white/15 text-center bg-white/5">
+                    <span className="text-xs font-semibold text-white block font-mono">
                       {metric}
                     </span>
                   </div>
@@ -87,14 +87,14 @@ export default function ProjectModal({ project, onClose }) {
           {/* Highlights checklist */}
           {project.highlights && (
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
-                <Zap size={16} className="text-slate-900" />
+              <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-300 mb-3 flex items-center gap-2 font-mono">
+                <Zap size={16} className="text-white" />
                 Points Forts & Fonctionnalités
               </h4>
               <ul className="space-y-2">
                 {project.highlights.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                    <CheckCircle2 size={16} className="text-slate-900 shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-200">
+                    <CheckCircle2 size={16} className="text-white shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -104,12 +104,12 @@ export default function ProjectModal({ project, onClose }) {
 
           {/* Technologies Used */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-300 mb-3 font-mono">
               Technologies Appliquées
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
-                <span key={tech} className="glass-pill border-slate-300 bg-slate-100 text-slate-800 text-xs">
+                <span key={tech} className="glass-pill border-white/20 bg-white/10 text-white text-xs font-mono">
                   {tech}
                 </span>
               ))}
@@ -119,7 +119,7 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Footer Actions */}
-        <div className="p-4 sm:p-6 border-t border-slate-200 bg-slate-50 flex flex-wrap items-center justify-between gap-4 shrink-0">
+        <div className="p-4 sm:p-6 border-t border-white/15 bg-black flex flex-wrap items-center justify-between gap-4 shrink-0">
           <div className="flex items-center gap-3">
             {project.demoUrl && (
               <a
@@ -147,7 +147,7 @@ export default function ProjectModal({ project, onClose }) {
 
           <button
             onClick={onClose}
-            className="text-xs text-slate-500 hover:text-slate-900 underline underline-offset-4"
+            className="text-xs text-zinc-400 hover:text-white underline underline-offset-4 font-mono"
           >
             Fermer l'aperçu
           </button>

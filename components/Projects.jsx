@@ -72,50 +72,50 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="glass-card overflow-hidden flex flex-col justify-between border border-slate-200 group cursor-pointer shadow-sm hover:shadow-md transition-all"
+              className="glass-card overflow-hidden flex flex-col justify-between border border-white/15 group cursor-pointer hover:border-white/40 transition-all"
               onClick={() => setSelectedProject(project)}
             >
               <div>
                 {/* Image Container with overlay */}
-                <div className="relative h-52 w-full overflow-hidden bg-slate-900">
+                <div className="relative h-52 w-full overflow-hidden bg-zinc-900">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
                   
                   {/* Category Pill */}
-                  <div className="absolute top-3 left-3 glass-pill text-xs border-slate-300 bg-white/90 text-slate-900">
+                  <div className="absolute top-3 left-3 glass-pill text-xs border-white/20 bg-black/60 text-white">
                     <span>{project.tag}</span>
                   </div>
 
                   {/* Expand badge */}
-                  <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/90 text-slate-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all shadow-md">
+                  <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all shadow-md">
                     <Maximize2 size={14} />
                   </div>
                 </div>
 
                 {/* Card Body */}
                 <div className="p-6 text-left">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-black transition-colors flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-white transition-colors flex items-center justify-between">
                     <span>{project.title}</span>
-                    <ArrowUpRight size={18} className="text-slate-400 group-hover:text-black transition-colors" />
+                    <ArrowUpRight size={18} className="text-zinc-400 group-hover:text-white transition-colors" />
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-600 mb-4 line-clamp-2">
+                  <p className="text-xs sm:text-sm text-zinc-300 mb-4 line-clamp-2">
                     {project.shortDesc}
                   </p>
 
                   {/* Tech stack badges */}
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.technologies.slice(0, 4).map((tech) => (
-                      <span key={tech} className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700">
+                      <span key={tech} className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-white/5 border border-white/15 text-zinc-300">
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 4 && (
-                      <span className="text-[11px] font-mono px-2 py-1 rounded bg-slate-100 text-slate-500">
+                      <span className="text-[11px] font-mono px-2 py-1 rounded bg-white/5 text-zinc-400">
                         +{project.technologies.length - 4}
                       </span>
                     )}
@@ -124,8 +124,8 @@ export default function Projects() {
               </div>
 
               {/* Card Footer Actions */}
-              <div className="px-6 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-                <span className="text-slate-900 font-semibold font-mono flex items-center gap-1">
+              <div className="px-6 pb-6 pt-2 border-t border-white/10 flex items-center justify-between text-xs">
+                <span className="text-white font-semibold font-mono flex items-center gap-1">
                   En savoir plus →
                 </span>
                 

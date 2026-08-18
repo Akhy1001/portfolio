@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="bg-[var(--bg-primary)] text-[var(--text-main)] antialiased selection:bg-slate-900 selection:text-white">
+      <body className="bg-[#000000] text-white antialiased selection:bg-white selection:text-black">
         {children}
       </body>
     </html>
