@@ -89,8 +89,7 @@ ${personalInfo.bio}
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
               Développeur <br />
-              <span className="text-gradient">Web & Applications</span> <br />
-              React & Next.js
+              <span className="text-gradient">Web & Applications</span>
             </h1>
 
             {/* Subtitle */}
