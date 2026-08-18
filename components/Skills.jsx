@@ -1,0 +1,176 @@
+"use client";
+
+import { useState } from "react";
+import { techStack } from "@/data/portfolioData";
+import {
+  Code2,
+  Zap,
+  FileCode,
+  Palette,
+  Layers,
+  Smartphone,
+  Box,
+  Layout,
+  Cpu,
+  Server,
+  Database,
+  GitBranch,
+  Cloud,
+  GitCommit,
+  Container,
+  Globe,
+  CheckCircle,
+  Sparkles,
+  Layers3,
+  Flame,
+} from "lucide-react";
+
+export default function Skills() {
+  const [activeCategory, setActiveCategory] = useState("Tous");
+
+  const categories = ["Tous", ...techStack.map((item) => item.category)];
+
+  const getIconComponent = (iconName) => {
+    const iconMap = {
+      Code2: <Code2 size={20} className="text-cyan-400" />,
+      Zap: <Zap size={20} className="text-yellow-400" />,
+      FileCode: <FileCode size={20} className="text-blue-400" />,
+      Palette: <Palette size={20} className="text-pink-400" />,
+      Layers: <Layers size={20} className="text-purple-400" />,
+      Smartphone: <Smartphone size={20} className="text-emerald-400" />,
+      Box: <Box size={20} className="text-amber-400" />,
+      Layout: <Layout size={20} className="text-indigo-400" />,
+      Cpu: <Cpu size={20} className="text-rose-400" />,
+      Server: <Server size={20} className="text-green-400" />,
+      Database: <Database size={20} className="text-cyan-400" />,
+      GitBranch: <GitBranch size={20} className="text-violet-400" />,
+      Cloud: <Cloud size={20} className="text-sky-400" />,
+      GitCommit: <GitCommit size={20} className="text-orange-400" />,
+      Container: <Container size={20} className="text-blue-400" />,
+      Globe: <Globe size={20} className="text-teal-400" />,
+      CheckCircle: <CheckCircle size={20} className="text-emerald-400" />,
+    };
+    return iconMap[iconName] || <Code2 size={20} className="text-[var(--theme-primary)]" />;
+  };
+
+  const filteredCategories =
+    activeCategory === "Tous"
+      ? techStack
+      : techStack.filter((cat) => cat.category === activeCategory);
+
+  return (
+    <section id="skills" className="section-padding relative">
+      <div className="container">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 glass-pill mb-4 border border-[var(--theme-primary)]/30">
+            <Sparkles size={14} className="text-[var(--theme-primary)]" />
+            <span>Expertise Technique</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
+            Compétences & <span className="text-gradient">Stack Technique</span>
+          </h2>
+          <p className="text-gray-300 text-base sm:text-lg">
+            Un écosystème d'outils modernes maîtrisés pour concevoir des applications web réactives et des expériences mobiles haut de gamme.
+          </p>
+        </div>
+
+        {/* Category Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+                activeCategory === cat
+                  ? "bg-gradient-to-r from-[var(--theme-primary)] to-[var(--theme-secondary)] text-white shadow-lg shadow-[var(--theme-glow)]"
+                  : "glass-card text-gray-300 hover:text-white hover:border-white/20"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Skills Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          {filteredCategories.map((group) => (
+            <div key={group.category} className="glass-card p-6 border border-white/10 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-6 pb-3 border-b border-white/10">
+                  <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                    <Layers3 size={18} className="text-[var(--theme-primary)]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">{group.category}</h3>
+                </div>
+
+                <div className="space-y-5">
+                  {group.skills.map((skill) => (
+                    <div key={skill.name} className="group">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <div className="flex items-center gap-2.5">
+                          {getIconComponent(skill.icon)}
+                          <span className="font-semibold text-gray-100 text-sm sm:text-base group-hover:text-[var(--theme-primary)] transition-colors">
+                            {skill.name}
+                          </span>
+                        </div>
+                        <span className="font-mono text-xs text-gray-400 font-semibold">{skill.level}%</span>
+                      </div>
+
+                      <p className="text-xs text-gray-400 mb-2 pl-7">{skill.description}</p>
+
+                      {/* Progress Bar */}
+                      <div className="w-full bg-white/5 h-2 rounded-full overflow-hidden p-0.5 border border-white/5">
+                        <div
+                          className="h-full rounded-full bg-gradient-to-r from-[var(--theme-primary)] to-[var(--theme-secondary)] transition-all duration-1000 ease-out"
+                          style={{ width: `${skill.level}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Development Philosophy Card */}
+        <div className="mt-14 glass-card p-8 border border-white/10 bg-gradient-to-br from-white/5 to-transparent relative overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center shrink-0">
+                <Flame size={24} className="text-purple-400" />
+              </div>
+              <div>
+                <h4 className="font-bold text-lg text-white mb-1">Performance & Speed</h4>
+                <p className="text-xs text-gray-400">Temps de chargement optimisés sous la seconde, Server Components & bundle minifié.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center shrink-0">
+                <Smartphone size={24} className="text-cyan-400" />
+              </div>
+              <div>
+                <h4 className="font-bold text-lg text-white mb-1">Mobile First & Native</h4>
+                <p className="text-xs text-gray-400">Applications mobiles fluides à 60 FPS avec React Native et gestes tactiles optimisés.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
+                <Code2 size={24} className="text-emerald-400" />
+              </div>
+              <div>
+                <h4 className="font-bold text-lg text-white mb-1">Clean & Maintainable Code</h4>
+                <p className="text-xs text-gray-400">Typage strict TypeScript, composants réutilisables et architecture modulaire évolutive.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
