@@ -24,7 +24,6 @@ export default function Navbar({ currentTheme, setTheme }) {
     { name: "Accueil", href: "#hero" },
     { name: "Compétences", href: "#skills" },
     { name: "Projets", href: "#projects" },
-    { name: "Démo Live", href: "#simulator" },
     { name: "Formation", href: "#education" },
     { name: "Contact", href: "#contact" },
   ];

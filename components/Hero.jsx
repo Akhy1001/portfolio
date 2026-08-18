@@ -115,9 +115,8 @@ ${personalInfo.bio}
                 <ArrowRight size={18} />
               </a>
               
-              <a href="#simulator" className="btn-secondary text-base py-3.5 px-7">
-                <Smartphone size={18} className="text-[var(--theme-primary)]" />
-                <span>Tester la Démo Live</span>
+              <a href="#contact" className="btn-secondary text-base py-3.5 px-7">
+                <span>Me Contacter</span>
               </a>
             </div>
 
