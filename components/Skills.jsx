@@ -136,35 +136,35 @@ export default function Skills() {
         </div>
 
         {/* Development Philosophy Card */}
-        <div className="mt-14 glass-card p-8 border border-white/10 bg-gradient-to-br from-white/5 to-transparent relative overflow-hidden">
+        <div className="mt-14 glass-card p-8 border border-slate-200 bg-white/80 relative overflow-hidden shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center shrink-0">
-                <Flame size={24} className="text-purple-400" />
+              <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-900 flex items-center justify-center shrink-0 text-white shadow-md">
+                <Flame size={24} className="text-white" />
               </div>
               <div>
-                <h4 className="font-bold text-lg text-white mb-1">Performance & Speed</h4>
-                <p className="text-xs text-gray-400">Temps de chargement optimisés sous la seconde, Server Components & bundle minifié.</p>
+                <h4 className="font-bold text-lg text-slate-900 mb-1">Performance & Speed</h4>
+                <p className="text-xs text-slate-600">Temps de chargement optimisés sous la seconde, Server Components & bundle minifié.</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center shrink-0">
-                <Smartphone size={24} className="text-cyan-400" />
+              <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-900 flex items-center justify-center shrink-0 text-white shadow-md">
+                <Smartphone size={24} className="text-white" />
               </div>
               <div>
-                <h4 className="font-bold text-lg text-white mb-1">Mobile First & Native</h4>
-                <p className="text-xs text-gray-400">Applications mobiles fluides à 60 FPS avec React Native et gestes tactiles optimisés.</p>
+                <h4 className="font-bold text-lg text-slate-900 mb-1">Mobile First & Native</h4>
+                <p className="text-xs text-slate-600">Applications mobiles fluides à 60 FPS avec React Native et gestes tactiles optimisés.</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
-                <Code2 size={24} className="text-emerald-400" />
+              <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-900 flex items-center justify-center shrink-0 text-white shadow-md">
+                <Code2 size={24} className="text-white" />
               </div>
               <div>
-                <h4 className="font-bold text-lg text-white mb-1">Clean & Maintainable Code</h4>
-                <p className="text-xs text-gray-400">Typage strict TypeScript, composants réutilisables et architecture modulaire évolutive.</p>
+                <h4 className="font-bold text-lg text-slate-900 mb-1">Clean & Maintainable Code</h4>
+                <p className="text-xs text-slate-600">Typage strict TypeScript, composants réutilisables et architecture modulaire évolutive.</p>
               </div>
             </div>
           </div>

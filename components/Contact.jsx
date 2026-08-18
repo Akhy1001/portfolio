@@ -31,50 +31,50 @@ export default function Contact() {
       name: "GitHub",
       handle: "@Akhy1001",
       url: personalInfo.github,
-      icon: <Github size={24} className="text-white" />,
-      color: "from-white/5 to-white/10",
-      borderColor: "hover:border-white/50",
+      icon: <Github size={24} className="text-slate-900" />,
+      color: "from-slate-100 to-slate-200/50",
+      borderColor: "hover:border-slate-400",
     },
     {
       name: "LinkedIn",
       handle: "Anas FAIZ",
       url: personalInfo.linkedin,
-      icon: <Linkedin size={24} className="text-white" />,
-      color: "from-white/5 to-white/10",
-      borderColor: "hover:border-white/50",
+      icon: <Linkedin size={24} className="text-slate-900" />,
+      color: "from-slate-100 to-slate-200/50",
+      borderColor: "hover:border-slate-400",
     },
     {
       name: "Twitter / X",
       handle: "@Akhy1001",
       url: personalInfo.twitter,
-      icon: <Twitter size={24} className="text-zinc-200" />,
-      color: "from-white/5 to-white/10",
-      borderColor: "hover:border-white/50",
+      icon: <Twitter size={24} className="text-slate-900" />,
+      color: "from-slate-100 to-slate-200/50",
+      borderColor: "hover:border-slate-400",
     },
     {
       name: "Discord",
       handle: "Akhy1001",
       url: personalInfo.discord,
-      icon: <MessageSquare size={24} className="text-zinc-200" />,
-      color: "from-white/5 to-white/10",
-      borderColor: "hover:border-white/50",
+      icon: <MessageSquare size={24} className="text-slate-900" />,
+      color: "from-slate-100 to-slate-200/50",
+      borderColor: "hover:border-slate-400",
     },
   ];
 
   return (
-    <section id="contact" className="section-padding relative bg-[#050505]/95">
+    <section id="contact" className="section-padding relative bg-[var(--bg-primary)]">
       <div className="container">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 glass-pill mb-4 border border-[var(--theme-primary)]/30">
-            <Sparkles size={14} className="text-[var(--theme-primary)]" />
+          <div className="inline-flex items-center gap-2 glass-pill mb-4 border border-slate-300">
+            <Sparkles size={14} className="text-slate-700" />
             <span>Contact & Réseaux</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
             Restons en <span className="text-gradient">Contact</span>
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg">
             N'hésitez pas à me contacter par email ou à me retrouver sur mes différents réseaux sociaux.
           </p>
         </div>
@@ -82,20 +82,20 @@ export default function Contact() {
         <div className="max-w-4xl mx-auto space-y-8">
           
           {/* Main Direct Email Highlight Card */}
-          <div className="glass-card p-8 border border-white/15 bg-gradient-to-br from-white/5 via-transparent to-white/5 relative overflow-hidden text-left">
+          <div className="glass-card p-8 border border-slate-200 bg-white/90 relative overflow-hidden text-left shadow-sm">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[var(--theme-primary)] to-[var(--theme-secondary)] flex items-center justify-center text-white shrink-0 shadow-lg shadow-[var(--theme-glow)]">
+                <div className="w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-white shrink-0 shadow-md">
                   <Mail size={28} />
                 </div>
                 <div>
-                  <span className="text-xs text-gray-400 font-mono block uppercase tracking-wider mb-1">
+                  <span className="text-xs text-slate-500 font-mono block uppercase tracking-wider mb-1">
                     Adresse Email Officielle
                   </span>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="text-xl sm:text-2xl font-extrabold text-white font-mono hover:text-[var(--theme-primary)] transition-colors"
+                    className="text-xl sm:text-2xl font-extrabold text-slate-900 font-mono hover:text-slate-700 transition-colors"
                   >
                     {personalInfo.email}
                   </a>
@@ -111,8 +111,8 @@ export default function Contact() {
                 >
                   {copiedEmail ? (
                     <>
-                      <Check size={16} className="text-green-400" />
-                      <span className="text-green-400">Email copié !</span>
+                      <Check size={16} className="text-emerald-600" />
+                      <span className="text-emerald-600">Email copié !</span>
                     </>
                   ) : (
                     <>
@@ -136,7 +136,7 @@ export default function Contact() {
 
           {/* Social Networks Cards Grid */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-4 text-left font-mono text-gray-300">
+            <h3 className="text-lg font-bold text-slate-900 mb-4 text-left font-mono">
               Retrouvez-moi sur les réseaux :
             </h3>
             
@@ -147,23 +147,23 @@ export default function Contact() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`glass-card p-5 border border-white/10 ${social.borderColor} bg-gradient-to-r ${social.color} transition-all flex items-center justify-between group text-left`}
+                  className={`glass-card p-5 border border-slate-200 ${social.borderColor} bg-gradient-to-r ${social.color} transition-all flex items-center justify-between group text-left shadow-sm`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform">
+                    <div className="p-3 rounded-xl bg-white border border-slate-200 group-hover:scale-110 transition-transform shadow-xs">
                       {social.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-white text-base group-hover:text-[var(--theme-primary)] transition-colors">
+                      <h4 className="font-bold text-slate-900 text-base group-hover:text-black transition-colors">
                         {social.name}
                       </h4>
-                      <span className="text-xs text-gray-400 font-mono">
+                      <span className="text-xs text-slate-500 font-mono">
                         {social.handle}
                       </span>
                     </div>
                   </div>
 
-                  <ExternalLink size={18} className="text-gray-400 group-hover:text-white transition-colors" />
+                  <ExternalLink size={18} className="text-slate-400 group-hover:text-slate-900 transition-colors" />
                 </a>
               ))}
             </div>

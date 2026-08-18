@@ -57,10 +57,10 @@ export default function ProjectModal({ project, onClose }) {
           
           {/* Short & Long Description */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-[var(--theme-primary)] mb-2">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-2">
               Présentation du Projet
             </h4>
-            <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
               {project.longDesc}
             </p>
           </div>
@@ -68,14 +68,14 @@ export default function ProjectModal({ project, onClose }) {
           {/* Key Metrics */}
           {project.metrics && project.metrics.length > 0 && (
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-2">
-                <Award size={16} className="text-amber-400" />
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
+                <Award size={16} className="text-slate-900" />
                 Impact & Résultats Clés
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {project.metrics.map((metric, idx) => (
-                  <div key={idx} className="glass-card p-3 border-white/10 text-center bg-white/5">
-                    <span className="text-xs font-semibold text-[var(--theme-primary)] block">
+                  <div key={idx} className="glass-card p-3 border-slate-200 text-center bg-slate-50 shadow-xs">
+                    <span className="text-xs font-semibold text-slate-900 block">
                       {metric}
                     </span>
                   </div>
@@ -87,14 +87,14 @@ export default function ProjectModal({ project, onClose }) {
           {/* Highlights checklist */}
           {project.highlights && (
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-2">
-                <Zap size={16} className="text-[var(--theme-secondary)]" />
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
+                <Zap size={16} className="text-slate-900" />
                 Points Forts & Fonctionnalités
               </h4>
               <ul className="space-y-2">
                 {project.highlights.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
-                    <CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                    <CheckCircle2 size={16} className="text-slate-900 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -104,12 +104,12 @@ export default function ProjectModal({ project, onClose }) {
 
           {/* Technologies Used */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-3">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">
               Technologies Appliquées
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
-                <span key={tech} className="glass-pill border-white/15 text-xs">
+                <span key={tech} className="glass-pill border-slate-300 bg-slate-100 text-slate-800 text-xs">
                   {tech}
                 </span>
               ))}
@@ -119,7 +119,7 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Footer Actions */}
-        <div className="p-4 sm:p-6 border-t border-white/10 bg-[#0B0F19] flex flex-wrap items-center justify-between gap-4 shrink-0">
+        <div className="p-4 sm:p-6 border-t border-slate-200 bg-slate-50 flex flex-wrap items-center justify-between gap-4 shrink-0">
           <div className="flex items-center gap-3">
             {project.demoUrl && (
               <a
@@ -128,7 +128,7 @@ export default function ProjectModal({ project, onClose }) {
                 rel="noopener noreferrer"
                 className="btn-primary py-2.5 px-5 text-sm"
               >
-                <span>Démo Live</span>
+                <span>Voir le projet</span>
                 <ExternalLink size={16} />
               </a>
             )}
@@ -147,7 +147,7 @@ export default function ProjectModal({ project, onClose }) {
 
           <button
             onClick={onClose}
-            className="text-xs text-gray-400 hover:text-white underline underline-offset-4"
+            className="text-xs text-slate-500 hover:text-slate-900 underline underline-offset-4"
           >
             Fermer l'aperçu
           </button>
