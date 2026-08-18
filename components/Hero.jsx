@@ -31,7 +31,7 @@ export default function Hero() {
   ],
   passion: "Créer des interfaces fluides & des apps scalables",
   location: "${personalInfo.location}",
-  status: "Available for freelance & full-time"
+  status: "Looking for an apprenticeship (Alternance)"
 };`,
     "stack.json": `{
   "core": ["React 18", "Next.js 14 App Router", "React Native"],
