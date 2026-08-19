@@ -37,15 +37,15 @@ export default function Projects() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 glass-pill mb-4 border border-[var(--theme-primary)]/30">
-            <Sparkles size={14} className="text-[var(--theme-primary)]" />
+          <div className="inline-flex items-center gap-2 glass-pill mb-4 border border-white/20">
+            <Sparkles size={14} className="text-white" />
             <span>Réalisations Phares</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
             Projets <span className="text-gradient">Web & Applications</span>
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg">
-            Découvrez une sélection de projets interactifs développés avec les technologies React, Next.js 14 et React Native.
+          <p className="text-zinc-300 text-base sm:text-lg">
+            Mes projets phares illustrant mon savoir-faire technique : développement Full Stack, intégration d'APIs, interfaces réactives et applications mobiles natives.
           </p>
         </div>
 
@@ -57,8 +57,8 @@ export default function Projects() {
               onClick={() => setFilter(f.id)}
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
                 filter === f.id
-                  ? "bg-gradient-to-r from-[var(--theme-primary)] to-[var(--theme-secondary)] text-white shadow-lg shadow-[var(--theme-glow)]"
-                  : "glass-card text-gray-300 hover:text-white hover:border-white/20"
+                  ? "bg-white text-black font-bold shadow-lg shadow-white/20"
+                  : "glass-card text-zinc-300 hover:text-white hover:border-white/30"
               }`}
             >
               {f.icon}

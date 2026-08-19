@@ -317,3 +317,13 @@ a {
   box-shadow: 0 0 10px #FFFFFF;
   animation: pulseGlow 2s infinite;
 }
+
+/* Hide Header / Navbar completely when a Project Modal is open */
+body.modal-open header {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translateY(-100%) !important;
+  transition: all 0.25s ease-in-out;
+}
+

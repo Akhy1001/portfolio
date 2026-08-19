@@ -4,18 +4,20 @@ import { useState } from "react";
 import { personalInfo } from "@/data/portfolioData";
 import {
   Sparkles,
-  Mail,
   Check,
   Copy,
-  Github,
-  Linkedin,
-  Twitter,
-  MessageSquare,
   Globe,
   Clock,
   ExternalLink,
   Send,
 } from "lucide-react";
+import {
+  GitHubBrandIcon,
+  LinkedInBrandIcon,
+  TwitterBrandIcon,
+  DiscordBrandIcon,
+  GmailIcon,
+} from "./TechIcons";
 
 export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -31,38 +33,38 @@ export default function Contact() {
       name: "GitHub",
       handle: "@Akhy1001",
       url: personalInfo.github,
-      icon: <Github size={24} className="text-white" />,
+      icon: <GitHubBrandIcon className="w-6 h-6" />,
       color: "from-white/5 to-white/10",
-      borderColor: "hover:border-white/50",
+      borderColor: "hover:border-zinc-400",
     },
     {
       name: "LinkedIn",
       handle: "Anas FAIZ",
       url: personalInfo.linkedin,
-      icon: <Linkedin size={24} className="text-white" />,
-      color: "from-white/5 to-white/10",
-      borderColor: "hover:border-white/50",
+      icon: <LinkedInBrandIcon className="w-6 h-6" />,
+      color: "from-blue-950/20 to-blue-900/10",
+      borderColor: "hover:border-[#0A66C2]/60",
     },
     {
       name: "Twitter / X",
       handle: "@Akhy1001",
       url: personalInfo.twitter,
-      icon: <Twitter size={24} className="text-white" />,
-      color: "from-white/5 to-white/10",
-      borderColor: "hover:border-white/50",
+      icon: <TwitterBrandIcon className="w-6 h-6" />,
+      color: "from-sky-950/20 to-sky-900/10",
+      borderColor: "hover:border-[#1DA1F2]/60",
     },
     {
       name: "Discord",
       handle: "Akhy1001",
       url: personalInfo.discord,
-      icon: <MessageSquare size={24} className="text-white" />,
-      color: "from-white/5 to-white/10",
-      borderColor: "hover:border-white/50",
+      icon: <DiscordBrandIcon className="w-6 h-6" />,
+      color: "from-indigo-950/20 to-indigo-900/10",
+      borderColor: "hover:border-[#5865F2]/60",
     },
   ];
 
   return (
-    <section id="contact" className="section-padding relative bg-black text-white">
+    <section id="contact" className="section-padding relative bg-transparent text-white">
       <div className="container">
         
         {/* Section Header */}
@@ -86,8 +88,8 @@ export default function Contact() {
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-white text-black flex items-center justify-center font-bold shrink-0 shadow-lg">
-                  <Mail size={28} />
+                <div className="w-14 h-14 rounded-2xl bg-white/[0.08] border border-white/15 flex items-center justify-center shrink-0 shadow-lg">
+                  <GmailIcon className="w-8 h-8" />
                 </div>
                 <div>
                   <span className="text-xs text-zinc-400 font-mono block uppercase tracking-wider mb-1">

@@ -1,21 +1,41 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { X, ExternalLink, Github, CheckCircle2, Award, Zap, Tag } from "lucide-react";
 
 export default function ProjectModal({ project, onClose }) {
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!project) return;
+
     const handleKeyDown = (e) => {
       if (e.key === "Escape") onClose();
     };
+
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
+    document.body.style.overflow = "hidden";
+    document.body.classList.add("modal-open");
 
-  if (!project) return null;
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "unset";
+      document.body.classList.remove("modal-open");
+    };
+  }, [project, onClose]);
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
+  if (!project || !mounted) return null;
+
+  return createPortal(
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md animate-fadeIn"
+    >
       <div
         className="relative w-full max-w-3xl glass-card bg-[#0A0A0A] border border-white/20 rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col text-white"
         onClick={(e) => e.stopPropagation()}
@@ -154,6 +174,7 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

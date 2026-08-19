@@ -63,7 +63,7 @@ export const projects = [
     category: "web",
     tag: "Productivité & Web App",
     featured: true,
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1000&auto=format&fit=crop",
+    image: "/projects/my-planner.jpg",
     shortDesc: "Planner personnel moderne pour suivre ses tâches, habitudes, objectifs, agenda et journal au quotidien.",
     longDesc: "Mon Planner est une application de productivité complète développée avec Next.js, Supabase et la police Geist. Elle centralise la gestion du temps, le suivi des habitudes quotidiennes, la fixation d'objectifs et un journal personnel sécurisé.",
     technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "React", "Geist Font"],
@@ -123,17 +123,17 @@ export const projects = [
     category: "web",
     tag: "Productivité & Web",
     featured: false,
-    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop",
-    shortDesc: "Task manager moderne avec priorités, dates d'échéance et gestion d'état réactive sous Next.js & Supabase.",
-    longDesc: "Application web d'organisation personnelle et professionnelle. Permet de créer, catégoriser, prioriser et marquer les tâches avec un système d'étiquettes de couleur.",
-    technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "React"],
-    metrics: ["Synchronisation instantanée", "Interface utilisateur épurée"],
+    image: "/projects/app-my-task.jpg",
+    shortDesc: "Task manager moderne et minimaliste en noir et blanc avec gestion d'état réactive sous Next.js & React.",
+    longDesc: "Application d'organisation et de gestion de tâches développée avec une interface minimaliste en noir et blanc. Permet de structurer ses journées par catégories (Work, Personal, Development), de suivre l'avancement en temps réel et de valider ses objectifs.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Supabase"],
+    metrics: ["Design Noir & Blanc Épuré", "Synchronisation instantanée", "Suivi d'avancement 100% réactif"],
     demoUrl: "https://github.com/Akhy1001/app-my-task",
     githubUrl: "https://github.com/Akhy1001/app-my-task",
     highlights: [
-      "Système de tri par priorité (Urgent, Important, Normal)",
-      "Statistiques d'accomplissement quotidiennes",
-      "Stockage sécurisé sur Supabase"
+      "Organisation par catégories (Work, Personal, Development)",
+      "Jauge de progression quotidienne et validation de tâches",
+      "Interface épurée haute performance sans distraction"
     ]
   },
   {

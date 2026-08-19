@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { techStack } from "@/data/portfolioData";
-import { Sparkles, Flame, Smartphone, Code2 } from "lucide-react";
+import { Sparkles, Code2 } from "lucide-react";
 import {
   TypeScriptIcon,
   NextjsIcon,
@@ -87,7 +87,7 @@ export default function Skills() {
             Compétences & <span className="text-gradient">Stack Technique</span>
           </h2>
           <p className="text-zinc-300 text-base sm:text-lg">
-            Un écosystème d'outils modernes maîtrisés pour concevoir des applications web réactives et des expériences mobiles haut de gamme.
+            Ma stack technique acquise à travers mes formations et mes réalisations concrètes, axée sur le développement Full Stack, le mobile et les architectures modernes.
           </p>
         </div>
 
@@ -141,41 +141,6 @@ export default function Skills() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Development Philosophy Card */}
-        <div className="mt-14 glass-card p-8 border border-white/15 bg-white/5 relative overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-white">
-                <Flame size={24} className="text-white" />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg text-white mb-1">Performance & Speed</h4>
-                <p className="text-xs text-zinc-400">Temps de chargement optimisés sous la seconde, Server Components & bundle minifié.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-white">
-                <Smartphone size={24} className="text-white" />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg text-white mb-1">Mobile First & Native</h4>
-                <p className="text-xs text-zinc-400">Applications mobiles fluides à 60 FPS avec React Native et gestes tactiles optimisés.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-white">
-                <Code2 size={24} className="text-white" />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg text-white mb-1">Clean & Maintainable Code</h4>
-                <p className="text-xs text-zinc-400">Typage strict TypeScript, composants réutilisables et architecture modulaire évolutive.</p>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
