@@ -83,11 +83,11 @@ ${personalInfo.bio}
           <div className="lg:col-span-7 flex flex-col gap-6 text-left">
             
             {/* Avatar & Status pill */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 animate-reveal-up delay-100">
               <img
                 src={personalInfo.avatar}
                 alt={personalInfo.name}
-                className="w-12 h-12 rounded-full border-2 border-[var(--theme-primary)] shadow-lg shadow-[var(--theme-glow)] object-cover"
+                className="w-12 h-12 rounded-full border-2 border-white/40 shadow-lg shadow-white/10 object-cover"
               />
               <div className="status-badge inline-flex items-center gap-2">
                 <span className="status-dot"></span>
@@ -96,18 +96,18 @@ ${personalInfo.bio}
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] animate-reveal-up delay-200">
               Développeur <br />
               <span className="text-gradient">Web & Applications</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed">
+            <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed animate-reveal-up delay-300">
               {personalInfo.tagline}
             </p>
 
             {/* Floating Tech Badges */}
-            <div className="flex flex-wrap items-center gap-2 pt-1">
+            <div className="flex flex-wrap items-center gap-2 pt-1 animate-reveal-up delay-400">
               {mainTechs.map((tech) => (
                 <span key={tech.name} className="glass-pill">
                   <span>{tech.icon}</span>
@@ -117,7 +117,7 @@ ${personalInfo.bio}
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-4 pt-4 animate-reveal-up delay-500">
               <a href="#projects" className="btn-primary text-base py-3.5 px-7">
                 <span>Explorer les Projets</span>
                 <ArrowRight size={18} />
@@ -129,7 +129,7 @@ ${personalInfo.bio}
             </div>
 
             {/* Quick Status Pill */}
-            <div className="pt-6 border-t border-white/15 mt-2">
+            <div className="pt-6 border-t border-white/15 mt-2 animate-reveal-up delay-600">
               <div className="glass-pill border border-white/20 px-4 py-2 text-sm text-zinc-300 font-mono inline-flex items-center gap-2">
                 <span>🎓</span>
                 <span>Formation : <strong className="text-white font-bold">{personalInfo.yearsExperience}</strong></span>
@@ -139,7 +139,7 @@ ${personalInfo.bio}
           </div>
 
           {/* Right Column: Interactive Code Terminal */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 animate-reveal-scale delay-300">
             <div className="glass-card overflow-hidden shadow-2xl border border-white/15 rounded-2xl relative group">
               
               {/* Terminal Window Bar */}

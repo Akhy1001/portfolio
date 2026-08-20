@@ -142,16 +142,16 @@ export const projects = [
     category: "fullstack",
     tag: "Fullstack & Dashboard",
     featured: false,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+    image: "/projects/site-patrimonia.jpg",
     shortDesc: "Site web et dashboard administrateur pour l'agence de gestion de patrimoine premium Patrimonia.",
     longDesc: "Solution web fullstack combinant une vitrine d'agence de conseil financier haut de gamme et un espace d'administration pour la gestion des dossiers clients et simulations.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "PostgreSQL"],
-    metrics: ["Vitrine élégante", "Espace Administrateur sécurisé"],
+    metrics: ["Vitrine élégante & Simulateur", "Espace Administrateur sécurisé", "Visualisation ROI interactive"],
     demoUrl: "https://github.com/Akhy1001/site-patrimonia",
     githubUrl: "https://github.com/Akhy1001/site-patrimonia",
     highlights: [
-      "Simulateur de rendement financier interactif",
-      "Tableau de bord administrateur avec métriques",
+      "Simulateur de rendement financier interactif avec curseurs dynamiques",
+      "Tableau de bord administrateur avec métriques de performance",
       "Formulaire de prise de rendez-vous personnalisé"
     ]
   },
