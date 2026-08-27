@@ -14,8 +14,6 @@ import {
 import {
   GitHubBrandIcon,
   LinkedInBrandIcon,
-  TwitterBrandIcon,
-  DiscordBrandIcon,
   GmailIcon,
 } from "./TechIcons";
 
@@ -44,22 +42,6 @@ export default function Contact() {
       icon: <LinkedInBrandIcon className="w-6 h-6" />,
       color: "from-blue-950/20 to-blue-900/10",
       borderColor: "hover:border-[#0A66C2]/60",
-    },
-    {
-      name: "Twitter / X",
-      handle: "@Akhy1001",
-      url: personalInfo.twitter,
-      icon: <TwitterBrandIcon className="w-6 h-6" />,
-      color: "from-sky-950/20 to-sky-900/10",
-      borderColor: "hover:border-[#1DA1F2]/60",
-    },
-    {
-      name: "Discord",
-      handle: "Akhy1001",
-      url: personalInfo.discord,
-      icon: <DiscordBrandIcon className="w-6 h-6" />,
-      color: "from-indigo-950/20 to-indigo-900/10",
-      borderColor: "hover:border-[#5865F2]/60",
     },
   ];
 

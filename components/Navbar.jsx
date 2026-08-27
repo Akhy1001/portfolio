@@ -48,7 +48,7 @@ export default function Navbar() {
             <span className="font-bold text-lg tracking-tight text-white group-hover:text-zinc-200 transition-colors">
               &lt;{personalInfo.name} <span className="text-white">.dev</span> /&gt;
             </span>
-            <span className="text-[11px] text-zinc-400 font-mono hidden sm:inline-block">Web & Mobile React</span>
+            <span className="text-[11px] text-zinc-400 font-mono hidden sm:inline-block">Web & Applications</span>
           </div>
         </a>
 

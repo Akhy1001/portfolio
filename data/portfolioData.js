@@ -3,7 +3,7 @@ export const personalInfo = {
   username: "Akhy1001",
   title: "Développeur Web & Applications",
   subtitle: "TypeScript • Next.js • React • Swift • C++",
-  tagline: "À la recherche d'une alternance en développement Web & Mobile. Je conçois des applications web modernes, des outils de productivité réactifs et des logiciels haut de gamme.",
+  tagline: "À la recherche d'une alternance en développement Web & Applications. Je conçois des applications web modernes, des outils de productivité réactifs et des logiciels haut de gamme.",
   bio: "Passionné par le développement d'applications performantes et l'architecture logicielle. Expérimenté dans l'écosystème TypeScript/Next.js/React pour le Web, Swift/React Native pour le Mobile, et C++/Qt pour les systèmes réseau.",
   location: "France / Remote",
   availability: "À la recherche d'une alternance",
@@ -13,8 +13,6 @@ export const personalInfo = {
   email: "anas.fz1001@gmail.com",
   github: "https://github.com/Akhy1001",
   linkedin: "https://www.linkedin.com/in/anas-faiz-b1a30535b",
-  twitter: "https://twitter.com",
-  discord: "https://discord.com",
   avatar: "https://avatars.githubusercontent.com/u/194927224?v=4",
 };
 

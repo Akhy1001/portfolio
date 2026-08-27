@@ -1,7 +1,7 @@
 "use client";
 
 import { personalInfo } from "@/data/portfolioData";
-import { ArrowUp, Heart } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -12,13 +12,9 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-transparent py-8 relative z-10">
       <div className="container relative flex flex-col sm:flex-row items-center justify-center min-h-[50px]">
         
-        {/* Centered Copyright & Tech Stack */}
-        <div className="text-xs text-zinc-400 text-center flex flex-col sm:flex-row items-center justify-center gap-2">
+        {/* Centered Copyright */}
+        <div className="text-xs text-zinc-400 text-center flex items-center justify-center">
           <span suppressHydrationWarning>© {new Date().getFullYear()} {personalInfo.name}. Tous droits réservés.</span>
-          <span className="hidden sm:inline text-zinc-600">•</span>
-          <span className="flex items-center gap-1 font-mono text-zinc-300">
-            Conçu avec <Heart size={12} className="text-white fill-white inline" /> Next.js 14 & React
-          </span>
         </div>
 
         {/* Scroll to Top Button on the right */}
