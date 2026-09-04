@@ -20,6 +20,8 @@ export const techStack = [
   {
     category: "Frontend Web & Frameworks",
     skills: [
+      { name: "HTML5", level: 96, icon: "Html", description: "Sémantique moderne, accessibilité (a11y) et structure SEO" },
+      { name: "CSS3", level: 95, icon: "Css", description: "Flexbox, Grid, animations fluides et design responsive" },
       { name: "TypeScript", level: 95, icon: "FileCode", description: "Typage strict, Generics, interfaces robustes" },
       { name: "Next.js 14", level: 92, icon: "Zap", description: "App Router, SSR/SSG, Server Actions" },
       { name: "React.js", level: 94, icon: "Code2", description: "Hooks avancés, architecture modulaire" },

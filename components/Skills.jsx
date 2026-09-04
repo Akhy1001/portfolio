@@ -9,6 +9,8 @@ import {
   ReactIcon,
   TailwindIcon,
   AngularIcon,
+  HtmlIcon,
+  CssIcon,
   SwiftIcon,
   ReactNativeIcon,
   CPlusPlusIcon,
@@ -28,6 +30,12 @@ export default function Skills() {
 
   const getSkillIcon = (skillName) => {
     switch (skillName) {
+      case "HTML5":
+      case "HTML":
+        return <HtmlIcon className="w-6 h-6" />;
+      case "CSS3":
+      case "CSS":
+        return <CssIcon className="w-6 h-6" />;
       case "TypeScript":
         return <TypeScriptIcon className="w-6 h-6" />;
       case "Next.js 14":
