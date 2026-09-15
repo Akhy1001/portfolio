@@ -8,22 +8,7 @@ import {
   Copy,
   Check,
   ArrowRight,
-  Download,
-  Smartphone,
-  Globe,
-  Sparkles,
-  Zap,
-  CheckCircle2,
 } from "lucide-react";
-import {
-  TypeScriptIcon,
-  NextjsIcon,
-  ReactIcon,
-  TailwindIcon,
-  SwiftIcon,
-  CPlusPlusIcon,
-  NodeJsIcon,
-} from "./TechIcons";
 
 export default function Hero() {
   const [activeTab, setActiveTab] = useState("anas.config.ts");
@@ -64,16 +49,6 @@ ${personalInfo.bio}
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const mainTechs = [
-    { name: "React 18", icon: <ReactIcon className="w-4 h-4" /> },
-    { name: "Next.js 14", icon: <NextjsIcon className="w-4 h-4" /> },
-    { name: "Swift", icon: <SwiftIcon className="w-4 h-4" /> },
-    { name: "TypeScript", icon: <TypeScriptIcon className="w-4 h-4" /> },
-    { name: "C++ / Qt", icon: <CPlusPlusIcon className="w-4 h-4" /> },
-    { name: "Node.js", icon: <NodeJsIcon className="w-4 h-4" /> },
-    { name: "Tailwind CSS", icon: <TailwindIcon className="w-4 h-4" /> },
-  ];
-
   return (
     <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       <div className="container relative z-10">
@@ -106,18 +81,8 @@ ${personalInfo.bio}
               {personalInfo.tagline}
             </p>
 
-            {/* Floating Tech Badges */}
-            <div className="flex flex-wrap items-center gap-2 pt-1 animate-reveal-up delay-400">
-              {mainTechs.map((tech) => (
-                <span key={tech.name} className="glass-pill">
-                  <span>{tech.icon}</span>
-                  <span>{tech.name}</span>
-                </span>
-              ))}
-            </div>
-
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-4 animate-reveal-up delay-500">
+            <div className="flex flex-wrap items-center gap-4 pt-2 animate-reveal-up delay-400">
               <a href="#projects" className="btn-primary text-base py-3.5 px-7">
                 <span>Explorer les Projets</span>
                 <ArrowRight size={18} />
@@ -129,7 +94,7 @@ ${personalInfo.bio}
             </div>
 
             {/* Quick Status Pill */}
-            <div className="pt-6 border-t border-white/15 mt-2 animate-reveal-up delay-600">
+            <div className="pt-6 border-t border-white/15 mt-2 animate-reveal-up delay-500">
               <div className="glass-pill border border-white/20 px-4 py-2 text-sm text-zinc-300 font-mono inline-flex items-center gap-2">
                 <span>🎓</span>
                 <span>Formation : <strong className="text-white font-bold">{personalInfo.yearsExperience}</strong></span>
