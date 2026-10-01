@@ -197,7 +197,7 @@ export const projects = [
 
 export const education = [
   {
-    period: "Dès Septembre 2026",
+    period: "En cours",
     degree: "Bachelor Concepteur Développeur Web Full Stack",
     institution: "3iL Ingénieurs",
     option: "Reconnu par l'État • Certification RNCP39608 (Niveau 6)",
@@ -205,20 +205,20 @@ export const education = [
     skills: ["Front-End & UX/UI", "Back-End POO & MVC", "Bases NoSQL & SQL", "Architectures Cloud", "Gestion de Projet Agile", "Certification RNCP39608"]
   },
   {
-    period: "Depuis septembre 2024 - Présent",
+    period: "2024 – 2026",
     degree: "BTS CIEL – Cybersécurité, Informatique et Réseaux Électroniques",
     institution: "Cité scolaire Mirepoix",
     option: "Option Informatique et Réseaux",
-    description: "Formation axée sur le développement, les réseaux, la cybersécurité et l'électronique.",
-    skills: ["Développement Web/App", "Réseaux & TCP/IP", "Cybersécurité", "Électronique", "C++ / Systems"]
+    description: "Formation axée sur le développement logiciel (C++, POO), la conception d'applications web & client-serveur, l'administration de bases de données et la sécurisation applicative.",
+    skills: ["Développement Logiciel & Web", "Programmation C++ / C", "Architectures Client/Serveur", "Bases de Données & Sockets", "Sécurité Applicative"]
   },
   {
-    period: "2023 – 2024",
+    period: "2021 – 2024",
     degree: "Baccalauréat Technologique STI2D",
     institution: "Lycée International Victor Hugo, Colomiers",
     option: "Option Systèmes d'information et informatique (SIN)",
-    description: "Spécialisation en informatique et développement de systèmes numériques.",
-    skills: ["Systèmes d'Information", "Informatique", "Développement Numérique", "Algorithmique"]
+    description: "Spécialisation axée sur l'apprentissage de l'algorithmique, les fondamentaux du code, la logique de programmation et le prototypage de projets numériques.",
+    skills: ["Algorithmique & Code", "Bases du Développement Web", "Projets Numériques", "Logique de Programmation"]
   }
 ];
 

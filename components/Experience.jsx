@@ -18,7 +18,7 @@ export default function Experience() {
             Parcours & <span className="text-gradient">Formation</span>
           </h2>
           <p className="text-zinc-300 text-base sm:text-lg">
-            Mon cursus académique en informatique, réseaux, cybersécurité et développement logiciel.
+            Mon cursus académique axé sur le développement web & applications, l'ingénierie logicielle et les architectures modernes.
           </p>
         </div>
 
